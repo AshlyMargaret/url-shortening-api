@@ -1,23 +1,45 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Component/Header/Header';
+import Banner from './Component/Banner/Banner';
+import StaticDashBoard from './Component/StaticDashBoard/StaticDashBoard';
+import SearchBar from './Component/SearchBar/SearchBar';
+import BoostSection from './Component/BoostSection/BoostSection';
+import Footer from './Component/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+      <header>
+        <Header/>
       </header>
+
+      <main>
+        <Banner/>
+      </main>
+
+      <section className='staticSection'>
+
+        <div className="urlShortenBox">
+        <SearchBar/>
+        </div>
+
+        <div className="sectionDashBoard">
+        <StaticDashBoard/>
+        </div>  
+             
+      </section>
+
+      <section className='boostSection'>
+        <BoostSection/>
+      </section>
+
+      <footer>
+        <div className="footerSec">
+        <Footer/>
+        </div>    
+      </footer>
+     
     </div>
   );
 }

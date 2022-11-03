@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.banner{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: 60px;
+}
+.bannerImageArea img{
+    width: 500px;
+}
+.bannerTitle h1{
+    width: 250px;
+    font-weight:bold;
+   
+}
+.bannerPara p{
+    width: 350px;
+}
+.bannerTextArea{
+    margin-left: 135px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.getStartedBtn button{
+    background-color: #2BD1CD;
+    color: white;
+    width: 120px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

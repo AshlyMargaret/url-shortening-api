@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.leftSideHeaderSec{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.navSec ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.righrSideHeaderSec{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.headerLoginBtn,.headerSignUpbtn{
+    width: 90px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.headerSignUpbtn{
+    background-color: #2BD1CD;
+    color: white;
+}

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.imageSec{
+    height: 60px;
+    width: 60px;
+    background-color: #3A3053;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -27px;
+}
+.imageSec img{
+    width: 30px;   
+}
+.rowPost{
+    padding: 20px;
+    border-radius: 8px;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.rowPostPara p{
+    width: 270px;
+}
+.rowPostTitle{
+    margin-top: 20px;
+}

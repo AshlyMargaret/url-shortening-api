@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.searchBar{
+    margin-bottom: 30px;
+    background-image:  url(../../images/bg-boost-desktop.svg);
+    background-color: #382E50;
+    height: 100px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.searchBar input{
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+}
+.searchBar button{
+    width: 120px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #2BD1CD;
+    color: white;
+}

@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.staticDashBoard{
+    padding-top: 160px;
+    background-color: #F0F1F6;
+}
+.rowSectionStatics{
+    margin-top: 160px;
+    height: 215px;
+    display: flex;
+    gap: 20px;
+   
+}
+.box1{
+    width: 350px;
+    align-self: flex-start;
+    position: relative;
+}
+.line1{
+    width: 50px;
+    height: 8px;
+    background-color: #2AD0D3;
+    position: absolute;
+    right: -50px;
+    bottom: 74px;
+}
+.box2{
+    width: 350px;
+   
+    align-self: center;
+    position: relative;
+}
+.line2{
+    width: 50px;
+    height: 8px;
+    background-color: #2AD0D3;
+    position: absolute;
+    right: -50px;
+    bottom: 74px;
+}
+.box3{
+    width: 350px;   
+    align-self: flex-end;    
+}
+.staticTitle{
+    text-align: center;
+}
+.staticPara{
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.staticPara p{
+    width: 420px;
+    line-height: 25px;
+}

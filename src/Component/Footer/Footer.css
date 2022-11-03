@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .footer a{
+    color: white;   
+  }
+  .footer{
+    padding-top: 90px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .featuresBoxUl{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .socialIcons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .aBold{
+    font-weight: bold;
+   
+  }
+  .mainLi{
+    padding-bottom: 20px;
+  }
