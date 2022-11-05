@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.searchBar{
+.searchBarSec{
     margin-bottom: 30px;
     background-image:  url(../../images/bg-boost-desktop.svg);
     background-color: #382E50;
@@ -17,17 +17,50 @@
     flex-direction: row;
     gap: 10px;
 }
-.searchBar input{
+.searchBarSec input{
     width: 80%;
     padding: 10px;
     border-radius: 8px;
     border: none;
 }
-.searchBar button{
+.searchBarSec button{
     width: 120px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
     background-color: #2BD1CD;
     color: white;
+}
+
+.searchBar{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.rrr{
+    width: 100%;
+    background-color: #382E50;
+}
+
+.resultsShortlink{
+    width: 100%;
+    padding: 20px;
+    background-color:#FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.resultsShortlink button{
+    background-color: #2BD1CD;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    cursor: pointer;
+}
+.urlShortLink{
+    color: #2BD1CD;
+    cursor: pointer;
 }
