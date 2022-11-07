@@ -1,30 +1,62 @@
 import React from 'react'
 import './SearchBar.css'
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import axios from '../../axios'
 import ShortLink from '../ShortLink/ShortLink'
 
+const getLocalStorage = () => {
+  let links = localStorage.getItem("Shorten-Url")
+
+  if (links) {
+      return JSON.parse(links)
+  } else {
+      return []
+  }
+}
 
 
 function SearchBar() {
 
  
-  const [shortLinks, setShortLinks] = useState([])
+  const [shortLinks, setShortLinks] = useState(getLocalStorage())
 
   const [url, setUrl] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem("Shorten-Url",JSON.stringify(shortLinks))
+ }, [shortLinks])
+
+ 
+
 
    const shortLink = (url)=>{  
      axios.get(`v2/shorten?url=${url}`).then((response)=>{
       const shorten = response.data.result.short_link
-      setShortLinks([...shortLinks,{ id:Date.now(), shortenLink:shorten , inputUrl:url} ]) 
-      // console.log("shortLinks:",shortLinks)    
+      setShortLinks([...shortLinks,{ id:Date.now(), shortenLink:shorten , inputUrl:url} ])   
+
      })       
    }
+ 
+
+      const removeItem = (e) => {
+       console.log("I am clicked in another component");
+       console.log("id:",e.target.id);
+       const newShortLinks = shortLinks.filter((object)=>{
+        if(object.id != e.target.id){
+          console.log("balance array is:",object);
+         return object
+        }
+        return null
+       })
+       
+       setShortLinks(newShortLinks)
+    }
 
   return (
     <div className='searchBar'>
      <div className='searchBarSec'>
-     <input type="text"
+     <input className={`${url === "" ? "error" : ""}`}
+              type="link"
               name="url"
               id="url"
               value={url}
@@ -34,19 +66,26 @@ function SearchBar() {
      <button onClick={()=>{
       shortLink(url)
      }}>Shorten It</button>
+      {url === "" && <div className="error-msg">please add a link</div>}
      </div>  
+     <div className="bbb">
 
+ 
+     
      {
       shortLinks.map((object,index)=>{  
         return(
-          <ShortLink key= {index} data={object}/>
+          <ShortLink key= {index} data={object} removeItem={removeItem}/>
             )
          })
      }
     
     </div>
 
+    </div>
+
   )
+ 
 }
 
 export default SearchBar
