@@ -4,14 +4,18 @@
     box-sizing: border-box;
 }
 .staticDashBoard{
-    padding-top: 160px;
+    padding-top: 30px;
     background-color: #F0F1F6;
 }
 .rowSectionStatics{
-    margin-top: 160px;
+    padding-bottom: 30px;
+    margin-top: 50px;
+   
     height: 215px;
     display: flex;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
    
 }
 .box1{
@@ -59,3 +63,4 @@
     width: 420px;
     line-height: 25px;
 }
+

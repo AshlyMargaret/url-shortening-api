@@ -4,14 +4,14 @@
     box-sizing: border-box;
 }
 .boostSection{
+    width: 100%;
     background-image:  url(../../images/bg-boost-desktop.svg);
     background-color: #382E50;
-    height: 170px; /* You must set a specified height */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    padding-bottom: 60px;
-    padding-top: 30px;
+    padding-bottom: 10px;
+  
     display: flex;
     flex-direction: column;
     justify-content: center;

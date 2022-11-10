@@ -65,17 +65,8 @@
     color: #2BD1CD;
     cursor: pointer;
 }
-.bbb{
-    height: 250px;
-    border-radius: 20px;
-    overflow-y: scroll;
-    display: flex;
-    flex-direction: column;
-    /* gap: 15px; */
-    
-}
 
-/* width */
+
 .bbb::-webkit-scrollbar {
     overflow: hidden;
   }
@@ -92,3 +83,6 @@
     text-transform: capitalize;
     color: brown;
   }
+
+
+  

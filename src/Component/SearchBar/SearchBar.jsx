@@ -68,9 +68,6 @@ function SearchBar() {
      }}>Shorten It</button>
       {url === "" && <div className="error-msg">please add a link</div>}
      </div>  
-     <div className="bbb">
-
- 
      
      {
       shortLinks.map((object,index)=>{  
@@ -80,7 +77,6 @@ function SearchBar() {
          })
      }
     
-    </div>
 
     </div>
 

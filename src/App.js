@@ -23,12 +23,15 @@ function App() {
         <div className="urlShortenBox">
         <SearchBar/>
         </div>
-
-        <div className="sectionDashBoard">
+        </section>
+      <section>
+      <div className="sectionDashBoard">
         <StaticDashBoard/>
         </div>  
-             
       </section>
+        
+             
+    
 
       <section className='boostSection'>
         <BoostSection/>
