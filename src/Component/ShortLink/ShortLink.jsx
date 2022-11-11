@@ -8,41 +8,20 @@ function ShortLink(props) {
 
   console.log("props.data",props.data);
    
-
-  //  const [links, setLinks] = useState([props.data]);
-  //  console.log("links",links);
-   const [copySuccess, setCopySuccess] = useState(false);
+   const [copySuccess, setCopySuccess] = useState("");
 
 
     const copyFunc = (id)=>{
       if(id === props.data.id){
         copy(props.data.shortenLink)
-        setCopySuccess(true)   
+        setCopySuccess(id)   
       }
       else{
-        setCopySuccess(false)
+        setCopySuccess("")
       }
         
     }
-
-
-    // const removeFunc = (id)=>{
-      
-    //      console.log("clicked for dlte",id)
-    //      const dlteObject =  links.filter((object)=>{
-    //       if(id === object.id){
-    //          console.log("deleted");
-    //          return object
-              
-    //       }
-    //       else{
-    //         console.log("not deleted");
-    //         return null
-    //       }
-    //      })   
-    //      setLinks(dlteObject)            
-    // }
-   
+  
    
   return (
     
@@ -52,8 +31,10 @@ function ShortLink(props) {
           <div className="urlShortLink">{props.data.shortenLink}</div>              
             <button onClick={()=>{
               copyFunc(props.data.id)
-            }}>{copySuccess ? 'Copied!' : 'Copy'}</button>
-            <button onClick={props.data.removeItem}>Clear</button>  
+            }}>{copySuccess == props.data.id ? 'Copied!' : 'Copy'}</button>
+            <button onClick={()=>{
+              props.removeItem(props.data.id)
+            }}>Delete</button>  
          </div>
        
     </div>
@@ -65,20 +46,3 @@ function ShortLink(props) {
 export default ShortLink
 
 
-
-// console.log("e.target.id",e.target);
-// console.log("props.data.id",props.data.id);
-// if(props.data.id == e.target.id)
-// {
-//   setCopySuccess(true)
-//   copy(props.data.shortenLink)   
-//   e.target.style.background = "hsl(257, 27%, 26%)";
-// }
-    
-//   else{
-//     setCopySuccess(false)
-//   }
-   
-// }}
-// >
-// {copySuccess ? 'Copied!' : 'Copy'}

@@ -38,17 +38,20 @@ function SearchBar() {
    }
  
 
-      const removeItem = () => {
-       console.log("I am clicked:id:");
-      //  const newShortLinks = shortLinks.filter((object)=>{
-      //   if(object.id === id){
-      //    return object
-      //   }
-      //   return null
-      //  })
-       
-      //  setShortLinks(newShortLinks)
+      const removeItem = (id) => {
+       console.log("I am clicked:id:",id);
+       const newShortLinks = shortLinks.filter((object)=>{
+        if(object.id !== id){
+         return object
+        }
+        
+       })
+       console.log("shortLinks",shortLinks);
+       console.log("newShortLinks",newShortLinks);
+       setShortLinks(newShortLinks)
     }
+
+    
 
   return (
     <div className='searchBar'>
