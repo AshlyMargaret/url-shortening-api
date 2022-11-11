@@ -38,18 +38,16 @@ function SearchBar() {
    }
  
 
-      const removeItem = (e) => {
-       console.log("I am clicked in another component");
-       console.log("id:",e.target.id);
-       const newShortLinks = shortLinks.filter((object)=>{
-        if(object.id != e.target.id){
-          console.log("balance array is:",object);
-         return object
-        }
-        return null
-       })
+      const removeItem = () => {
+       console.log("I am clicked:id:");
+      //  const newShortLinks = shortLinks.filter((object)=>{
+      //   if(object.id === id){
+      //    return object
+      //   }
+      //   return null
+      //  })
        
-       setShortLinks(newShortLinks)
+      //  setShortLinks(newShortLinks)
     }
 
   return (
@@ -72,7 +70,7 @@ function SearchBar() {
      {
       shortLinks.map((object,index)=>{  
         return(
-          <ShortLink key= {index} data={object} removeItem={removeItem}/>
+          <ShortLink key= {index} data={object} removeItem={removeItem}  />
             )
          })
      }
